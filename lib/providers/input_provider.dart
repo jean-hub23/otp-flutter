@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class InputProvider extends ChangeNotifier{
 
   final GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   String _codServicio  = '';
   bool _isloading = false;
+  
 
   bool get isloading => _isloading;
 
@@ -12,7 +13,6 @@ class InputProvider extends ChangeNotifier{
     _isloading = valor;
     notifyListeners();
   }
-
 
   String get codigoServicio => _codServicio;
 
